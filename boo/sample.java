@@ -7,6 +7,7 @@ public class CircularBuffer {
     private int _write_index = 0;
     private int _read_index = 0;
     private AtomicInteger _readable_data = new AtomicInteger(0);
+    private int _nesto = 11;
 
     public CircularBuffer(int buffer_size) {
         if(!IsPowerOfTwo(buffer_size)) {
@@ -21,6 +22,7 @@ public class CircularBuffer {
     }
 
     private int getTrueIndex(int i) {
+	//ovo je komentar
         return i % _buffer_size;
     }
 
